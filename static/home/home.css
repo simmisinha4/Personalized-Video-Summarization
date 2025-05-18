@@ -1,0 +1,371 @@
+/* Reset default margin & prevent overflow */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0B0E17;
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar */
+  .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111827; /* Very dark slate */
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links a,
+.nav-links button {
+  text-decoration: none;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.nav-links button {
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 6px;
+}
+
+  /* Main section */
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d1117; /* Rich black/navy */
+    padding: 4rem 1rem;
+    flex-wrap: wrap;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  
+  .text-section {
+    max-width: 550px;
+  }
+  
+  .text-section h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  
+  .text-section h1 span {
+    color: #9999ff;
+  }
+  
+  .text-section p {
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .buttons button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: #458BF7;
+    color: white;
+  }
+  
+  .btn-secondary {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  /* Video placeholder */
+  .video-box {
+    width: 420px;
+    height: 250px;
+    background-color: #ccc;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .video-box::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: url('https://img.icons8.com/ios-filled/50/000000/play--v1.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0.4;
+  }
+  
+  .badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #444;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .badge::before {
+    content: "⚡";
+  }
+  
+  
+  .how-it-works-section {
+    padding: 50px 8px;
+    background-color: #0d1117;;
+    color: white;
+    text-align: center;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .section-subtitle {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #d1d1d1;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .steps-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .step-card {
+    background-color: #2e2e2e;
+    padding: 25px 20px;
+    border-radius: 12px;
+    width: 245px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+  
+  .step-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .step-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
+  }
+  
+  .step-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .step-card p {
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+  
+  .pro-tip-box {
+    margin-top: 60px;
+    background-color: #2a2a2a;
+    padding: 20px 25px;
+    border-radius: 12px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 4px solid #888;
+  }
+  
+  .tip-icon {
+    font-size: 1.5rem;
+    margin-top: 4px;
+  }
+  
+  .tip-text p {
+    color: #aaa;
+    font-size: 0.95rem;
+    margin-top: 5px;
+  }
+  
+  body {
+    background-color: #1f1f1f;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .features-section {
+    padding: 60px 40px;
+    background-color: #0d1117;;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  .section-subtitle {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #cccccc;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .feature-card {
+    background-color: #3a3a3a;
+    padding: 25px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* subtle strong shadow */
+  }
+  
+  .feature-card h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    color: #dddddd;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .footer {
+    background-color: #0B0E17;
+    color: #ccc;
+    padding: 60px 40px 30px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-column h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #fff;
+  }
+  
+  .footer-column p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .logo span {
+    color: #ffffff;
+  }
+  
+  .social-icons {
+    margin-top: 15px;
+  }
+  
+  .social-icons a {
+    margin-right: 12px;
+    color: #aaa;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #ffffff;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    color: #777;
+  }

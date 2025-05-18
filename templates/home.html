@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MLVision - AI Video Analysis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='home/home.css') }}"></head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+        <img src="" alt="">MLVision</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">How It Works</a>
+      <a href="#">Features</a>
+      <button>Get Started</button>
+    </div>
+  </div>
+
+ 
+  <div class="main">
+    <div class="text-section">
+      <h1>Create <span>AI-Powered</span><br> Video Analysis In Seconds</h1>
+      <p>Upload any video, describe what moments you want to capture, and our ML model will automatically create highlight reels that match your description.</p>
+      <div class="buttons">
+        <button class="btn-primary" onclick="handleCreate()">Create Highlights Now</button>
+        <button class="btn-secondary">Learn How It Works</button>
+      </div>
+    </div>
+    <div class="video-box">
+      <div class="badge">ML-powered analysis</div>
+    </div>
+  </div>
+
+  <section class="how-it-works-section">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-subtitle">
+      Creating video highlights has never been easier. Our ML-powered platform transforms the way you work with video.
+    </p>
+    <div class="steps-container">
+      <div class="step-card">
+        <div class="step-icon">📤</div>
+        <h3>Upload Your Video</h3>
+        <p>Upload your video file or paste a YouTube link to get started.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon">👍</div>
+        <h3>Describe Your Highlights</h3>
+        <p>Tell our ML model what moments you want to extract from your video.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon">⚙️</div>
+        <h3>ML Processing</h3>
+        <p>Our advanced machine learning models analyze the video to identify and extract the moments you described.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon">▶️</div>
+        <h3>Get Your Highlights</h3>
+        <p>Download or share your custom highlight reel in just minutes.</p>
+      </div>
+    </div>
+  
+    <div class="pro-tip-box">
+      <div class="tip-icon">ℹ️</div>
+      <div class="tip-text">
+        <strong>Pro Tip</strong>
+        <p>For best results, be specific in your highlight description. Our ML model works best with precise instructions like "Extract all moments where a goal is scored, including the celebration and replay".</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="features-section">
+    <h2 class="section-title">ML-Powered Features</h2>
+    <p class="section-subtitle">
+      Our machine learning technology unlocks a range of powerful capabilities to help you create perfect highlights.
+    </p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Advanced Scene Detection</h3>
+        <p>Our ML algorithms recognize specific events in videos using computer vision and deep learning techniques.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Natural Language Processing</h3>
+        <p>Our NLP model understands and processes your descriptions to find exactly what you're looking for in the video.</p>
+      </div>
+      <div class="feature-card">
+        <h3>GPU-Accelerated Processing</h3>
+        <p>Get your highlight reel in minutes using our high-performance computing infrastructure powered by NVIDIA GPUs.</p>
+      </div>
+      <div class="feature-card">
+        <h3>High Quality Output</h3>
+        <p>Download your highlights in HD quality, with ML-enhanced video quality for optimal viewing experience.</p>
+      </div>
+      <div class="feature-card">
+        <h3>AI-Driven Editing</h3>
+        <p>Our ML algorithms automatically adjust transitions, frame rates, and audio levels for professional quality results.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Model Customization</h3>
+        <p>Train our ML models on your specific video content for even better highlight detection performance.</p>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-column brand">
+        <div class="logo">
+          <i class="fas fa-cog"></i> <span>ML</span>Vision
+        </div>
+        <p>
+          Transform your videos into captivating highlight reels with our ML-powered platform.
+          Perfect for research, presentations, sports analysis, and more.
+        </p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Documentation</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2025 MLVision. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="{{ url_for('static', filename='home/home.js') }}" defer></script>  
+  <script>
+    function toggleTab(tab) {
+      const uploadTab = document.getElementById('uploadTab');
+      const linkTab = document.getElementById('linkTab');
+      const uploadArea = document.getElementById('uploadArea');
+      const youtubeArea = document.getElementById('youtubeArea');
+
+      if (tab === 'upload') {
+        uploadTab.classList.add('active');
+        linkTab.classList.remove('active');
+        uploadArea.style.display = 'block';
+        youtubeArea.style.display = 'none';
+      } else {
+        linkTab.classList.add('active');
+        uploadTab.classList.remove('active');
+        uploadArea.style.display = 'none';
+        youtubeArea.style.display = 'block';
+      }
+    }
+
+    function generateHighlights() {
+      const description = document.getElementById('description').value;
+      const videoFile = document.getElementById('videoFile').files[0];
+      const youtubeLink = document.getElementById('youtubeLink').value;
+      
+      // Here, you can call your backend FastAPI to process the video or YouTube link with the description
+      console.log('Description:', description);
+      if (videoFile) {
+        console.log('Video File:', videoFile);
+      }
+      if (youtubeLink) {
+        console.log('YouTube Link:', youtubeLink);
+      }
+
+      // You can then send the data to the backend here via Fetch API or another method
+    }
+  </script>
+</body>
+</html>

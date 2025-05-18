@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generate Highlight</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='output/output.css') }}">
+</head>
+<body>
+
+   <div class="navbar">
+    <div class="logo">MLVision</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">How It Works</a>
+      <a href="#">Features</a>
+      <button>Get Started</button>
+    </div>
+  </div>
+
+  <section class="highlight-section">
+    <div class="tittle-page">
+        <h2 class="highlight-title">Your Highlight Video</h2>
+        <p class="highlight-subtitle">Watch, download, or share your generated highlight below</p>
+    </div>
+    
+    <div class="highlight-container">
+
+      <!-- Text Outside the Box -->
+      
+      <div class="video-preview-box">
+        <video controls class="output-video" src="path_to_output_video.mp4"></video>
+      </div>
+
+      <div class="action-buttons">
+        <button class="download-btn">Download</button>
+        <button class="share-btn">Share</button>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

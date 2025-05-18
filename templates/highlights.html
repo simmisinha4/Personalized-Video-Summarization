@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Highlights</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='highlights/highlights.css') }}">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">MLVision</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">How It Works</a>
+      <a href="#">Features</a>
+      <button>Get Started</button>
+    </div>
+  </div>
+
+  <section class="highlight-section">
+    <h2 class="highlight-title">Create Your Highlights</h2>
+    <p class="highlight-subtitle">
+      Upload your video or paste a YouTube link, then describe the highlights you want to extract.
+    </p>
+
+    <div class="highlight-container">
+      <div class="highlight-tabs">
+        <button class="tab active" id="uploadTab">Upload Video</button>
+        <button class="tab" id="linkTab">YouTube Link</button>
+      </div>
+
+      <!-- Upload Area -->
+      <div class="upload-area" id="uploadArea">
+        <div class="upload-box" id="drop-area">
+          <div class="upload-icon">⬆</div>
+          <p>Drag and drop your video here, or click to browse</p>
+          <input type="file" id="fileElem" accept="video/*" hidden />
+          <p class="upload-note">Supported formats: MP4, MOV, AVI (Max 500MB)</p>
+        </div>
+
+        <video id="videoPreview" controls style="display: none; width: 100%; max-height: 300px; margin: 20px 0;"></video>
+
+        <div class="highlight-description">
+          <label for="description"><strong>Highlight Description</strong></label>
+          <textarea id="description" placeholder="Describe what moments to extract..."></textarea>
+          <small>Be specific about what moments you want to capture.</small>
+        </div>
+
+        <button class="btn-primary" onclick="handleGenerate()">Generate Highlight</button>
+
+      </div>
+
+      <!-- YouTube Area -->
+      <div class="youtube-area" id="youtubeArea" style="display: none;">
+        <div class="youtube-box">
+          <label for="youtubeLink">Paste YouTube Link:</label>
+          <input type="text" id="youtubeLink" placeholder="https://www.youtube.com/watch?v=..." class="youtube-link-input" />
+        </div>
+
+        <div class="highlight-description">
+          <label for="ytDescription"><strong>Highlight Description</strong></label>
+          <textarea id="ytDescription" placeholder="Describe what highlights to extract from the YouTube video..."></textarea>
+          <small>Be specific about what moments you want to capture.</small>
+        </div>
+
+        <button class="btn-primary" onclick="handleGenerate()">Generate Highlight</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="{{ url_for('static', filename='highlights/highlights.js') }}"></script>
+</body>
+</html>

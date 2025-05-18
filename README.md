@@ -1,1 +1,1 @@
-# Personalized-Video-Summarization
+# Video-Summarization
